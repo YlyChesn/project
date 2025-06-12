@@ -26,6 +26,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #1A2F5A;
     background: #FFFFFF;
+    margin: 0;
 }
 
 header {
@@ -37,8 +38,15 @@ header {
     align-items: center;
 }
 
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    display: none;
+}
+
 .logo img {
     width: 150px;
+    height: 50px;
 }
 
 nav ul {
@@ -55,6 +63,7 @@ nav a {
 .user-options {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .hero {
@@ -64,7 +73,7 @@ nav a {
     color: #FFFFFF;
 }
 
-.hero h1 {
+.hero h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
 }
@@ -74,6 +83,7 @@ nav a {
     color: #FFFFFF;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
+    display: inline-block;
 }
 
 .events {
@@ -94,9 +104,55 @@ nav a {
     object-fit: cover;
 }
 
+.event-button {
+    background: #D4A017;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background: #D4A017;
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
 .sidebar {
     max-width: 300px;
     margin: 2rem auto;
+}
+
+.sidebar ul {
+    list-style: none;
 }
 
 footer {
@@ -104,4 +160,16 @@ footer {
     color: #FFFFFF;
     padding: 1rem;
     text-align: center;
+}
+
+footer a {
+    color: #D4A017;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
