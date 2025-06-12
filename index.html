@@ -7,101 +7,121 @@
     <title>Музей истории города</title>
     <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/scripts/script.js" defer></script>
 </head>
 
 <body class="page">
-    <header class="header">
-        <h1 class="header__title">Музей истории города</h1>
-        <a href="index.html" class="header__logo">
-            <img src="images/logo.jpg" alt="Логотип музея истории города" width="150" height="50" class="header__logo-image">
-        </a>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
-                <li class="header__nav-item"><a href="catalog.html" class="header__nav-link">Каталог</a></li>
-                <li class="header__nav-item"><a href="events.html" class="header__nav-link">Мероприятия</a></li>
-                <li class="header__nav-item"><a href="tickets.html" class="header__nav-link">Билеты</a></li>
-                <li class="header__nav-item"><a href="shop.html" class="header__nav-link">Магазин</a></li>
-                <li class="header__nav-item"><a href="about.html" class="header__nav-link">О музее</a></li>
-                <li class="header__nav-item"><a href="contacts.html" class="header__nav-link">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="header__user-options">
-            <a href="login.html" class="header__user-link">Войти</a>
-            <select name="language" class="header__language-select">
-                <option value="ru">Русский</option>
-                <option value="en">English</option>
-            </select>
-            <a href="accessibility.html" class="header__accessibility-link">Версия для слабовидящих</a>
+    <div id="preloader" class="preloader">
+        <div class="preloader__text">Загрузка...</div>
+        <div class="preloader__dots">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
-    <main class="main">
-        <section class="hero">
-            <h2 class="hero__title">Откройте историю нашего города</h2>
-            <p class="hero__subtitle">Посетите уникальные выставки и мероприятия, погрузитесь в прошлое!</p>
-            <a href="tickets.html" class="hero__cta-button">Купить билет</a>
-        </section>
-        <section class="events">
-            <h2 class="events__title">Мероприятия недели</h2>
-            <div class="events__grid">
-                <article class="event-card">
-                    <img src="images/event-1.jpg" alt="Выставка древних артефактов" width="250" height="150" class="event-card__image">
-                    <h3 class="event-card__title">Выставка артефактов</h3>
-                    <p class="event-card__date">15 июня, 14:00</p>
-                    <a href="events.html" class="event-card__button">Записаться</a>
-                </article>
-                <article class="event-card">
-                    <img src="images/event-2.jpg" alt="Лекция по истории города" width="250" height="150" class="event-card__image">
-                    <h3 class="event-card__title">Лекция по истории</h3>
-                    <p class="event-card__date">17 июня, 16:00</p>
-                    <a href="events.html" class="event-card__button">Записаться</a>
-                </article>
-                <article class="event-card">
-                    <img src="images/event-3.jpg" alt="Мастер-класс по старинным ремеслам" width="250" height="150" class="event-card__image">
-                    <h3 class="event-card__title">Мастер-класс</h3>
-                    <p class="event-card__date">20 июня, 11:00</p>
-                    <a href="events.html" class="event-card__button">Записаться</a>
-                </article>
+    </div>
+    <div id="content" style="display: none; opacity: 0;">
+        <header class="header">
+            <h1 class="header__title">Музей истории города</h1>
+            <a href="index.html" class="header__logo">
+                <img src="images/logo.jpg" alt="Логотип музея истории города" width="150" height="50" class="header__logo-image">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link links-link" data-page="lectures">Лекции</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link links-link" data-page="search">Поиск</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link links-link" data-page="menu">Меню</a></li>
+                </ul>
+            </nav>
+            <div class="header__user-options">
+                <a href="login.html" class="header__user-link">Войти</a>
+                <select name="language" class="header__language-select">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                </select>
+                <a href="accessibility.html" class="header__accessibility-link">Версия для слабовидящих</a>
             </div>
-        </section>
-        <section class="contact-form">
-            <h2 class="contact-form__title">Обратная связь</h2>
-            <form action="/submit-feedback" method="post" class="contact-form__form">
-                <div class="contact-form__group">
-                    <label for="name" class="contact-form__label">Ваше имя:</label>
-                    <input type="text" id="name" name="name" required class="contact-form__input">
-                </div>
-                <div class="contact-form__group">
-                    <label for="email" class="contact-form__label">Электронная почта:</label>
-                    <input type="email" id="email" name="email" required class="contact-form__input">
-                </div>
-                <div class="contact-form__group">
-                    <label for="message" class="contact-form__label">Сообщение:</label>
-                    <textarea id="message" name="message" rows="5" required class="contact-form__textarea"></textarea>
-                </div>
-                <button type="submit" class="contact-form__submit">Отправить</button>
-                <button type="submit" class="contact-form__submit contact-form__submit--disabled" disabled>Отправить (неактивно)</button>
+        </header>
+        <main class="main">
+            <form id="search-form" class="search-form">
+                <input type="text" id="search-input" placeholder="Введите запрос" class="search-form__input">
+                <button type="submit" class="search-form__button">Найти</button>
             </form>
-        </section>
-        <aside class="sidebar">
-            <h2 class="sidebar__title">Новости музея</h2>
-            <ul class="sidebar__news-list">
-                <li class="sidebar__news-item"><a href="news.html" class="sidebar__news-link">Открытие новой выставки</a></li>
-                <li class="sidebar__news-item"><a href="news.html" class="sidebar__news-link">Лекция известного историка</a></li>
-            </ul>
-        </aside>
-    </main>
-    <footer class="footer">
-        <p class="footer__info">Музей истории города | Контакты: <a href="mailto:info@museum.ru" class="footer__link">info@museum.ru</a> | <a href="tel:+79991234567" class="footer__link">+7 (999) 123-45-67</a> | 2025</p>
-        <p class="footer__developer">Разработчик: [Ваше имя]</p>
-        <nav class="footer__nav">
-            <ul class="footer__nav-list">
-                <li class="footer__nav-item"><a href="about.html" class="footer__nav-link">О музее</a></li>
-                <li class="footer__nav-item"><a href="contacts.html" class="footer__nav-link">Контакты</a></li>
-                <li class="footer__nav-item"><a href="social.html" class="footer__nav-link">Соцсети</a></li>
-            </ul>
-        </nav>
-    </footer>
+            <section class="hero">
+                <h2 class="hero__title">Откройте историю нашего города</h2>
+                <p class="hero__subtitle">Посетите уникальные выставки и мероприятия, погрузитесь в прошлое!</p>
+                <a href="tickets.html" class="hero__cta-button">Купить билет</a>
+            </section>
+            <section class="events">
+                <h2 class="events__title">Мероприятия недели</h2>
+                <div class="swiper cards__carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide card" data-section="ancient">
+                            <h3 class="card__title">Древний мир</h3>
+                            <p class="card__description">Древние цивилизации</p>
+                        </div>
+                        <div class="swiper-slide card" data-section="medieval">
+                            <h3 class="card__title">Средневековье</h3>
+                            <p class="card__description">Эпоха рыцарей и замков</p>
+                        </div>
+                        <div class="swiper-slide card" data-section="modern">
+                            <h3 class="card__title">Новое время</h3>
+                            <p class="card__description">Эпоха открытий и революций</p>
+                        </div>
+                        <div class="swiper-slide card" data-section="classic">
+                            <h3 class="card__title">Современность</h3>
+                            <p class="card__description">История XX-XXI веков</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div id="card-titles">
+                    <h3 class="card-titles__title">Список заголовков карточек</h3>
+                    <ul id="titles-list" class="card-titles__list"></ul>
+                </div>
+            </section>
+            <section class="articles">
+                <h2 class="articles__title">Последние статьи</h2>
+                <div class="articles__filters">
+                    <button class="articles__filter-button active" data-filter="all">Все</button>
+                    <button class="articles__filter-button" data-filter="ancient">Древний мир</button>
+                    <button class="articles__filter-button" data-filter="medieval">Средневековье</button>
+                    <button class="articles__filter-button" data-filter="modern">Новое время</button>
+                    <button class="articles__filter-button" data-filter="classic">Современность</button>
+                </div>
+                <ul id="articles-list" class="articles__list"></ul>
+            </section>
+            <section class="video">
+                <h2 class="video__title">Видеолекции</h2>
+                <div class="video__grid">
+                    <div class="video-player">
+                        <h3 class="video-player__title">Видеоплеер</h3>
+                    </div>
+                    <div class="lecturer-info">
+                        <h3 class="lecturer-info__title">Лектор</h3>
+                        <p class="lecturer-info__name">Профессор Иван И.</p>
+                        <p class="lecturer-info__description">Доктор исторических наук, специалист по древней истории</p>
+                    </div>
+                </div>
+            </section>
+            <div id="dynamic-cards" class="dynamic-cards"></div>
+        </main>
+        <footer class="footer">
+            <p class="footer__info">Музей истории города | Контакты: <a href="mailto:info@museum.ru" class="footer__link">info@museum.ru</a> | <a href="tel:+79991234567" class="footer__link">+7 (999) 123-45-67</a> | 2025</p>
+            <p class="footer__developer">Разработчик: [Ваше имя]</p>
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="about.html" class="footer__nav-link">О музее</a></li>
+                    <li class="footer__nav-item"><a href="contacts.html" class="footer__nav-link">Контакты</a></li>
+                    <li class="footer__nav-item"><a href="social.html" class="footer__nav-link">Соцсети</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <button id="scroll-top" class="scroll-top">↑ Вверх</button>
+    </div>
 </body>
 
 </html>

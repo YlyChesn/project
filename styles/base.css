@@ -1,7 +1,5 @@
-/* Базовые стили для типографики и универсальных элементов */
-
 .page {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, sans-serif;
     color: #1A2F5A;
     background: #FFFFFF;
     margin: 0;
@@ -11,9 +9,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
-
-/* Универсальные стили для ссылок */
 
 a {
     color: #D4A017;
@@ -34,9 +29,6 @@ a:focus {
 a:active {
     color: #800000;
 }
-
-
-/* Универсальные стили для кнопок */
 
 button,
 a[class*='__button'] {
@@ -77,13 +69,10 @@ button:disabled,
     transform: none;
 }
 
-
-/* Типографика */
-
 h1,
 h2,
 h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -113,9 +102,6 @@ p {
     margin: 8px 0;
 }
 
-
-/* Обработка переполнения текста */
-
 p,
 .event-card__date,
 .event-card__title {
@@ -123,9 +109,6 @@ p,
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-
-/* Анимация для карточек */
 
 .event-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -135,9 +118,6 @@ p,
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
-
-/* Адаптивная верстка для 768px */
 
 @media (max-width: 768px) {
     .page {

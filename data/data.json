@@ -1,0 +1,18 @@
+{
+    "ancient": {
+        "title": "Древний мир",
+        "description": "Древние цивилизации"
+    },
+    "medieval": {
+        "title": "Средневековье",
+        "description": "Эпоха рыцарей и замков"
+    },
+    "modern": {
+        "title": "Новое время",
+        "description": "Эпоха открытий и революций"
+    },
+    "classic": {
+        "title": "Современность",
+        "description": "История XX-XXI веков"
+    }
+}
