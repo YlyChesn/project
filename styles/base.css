@@ -18,10 +18,12 @@
 a {
     color: #D4A017;
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease, outline 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #A30000;
 }
 
 a:focus {
@@ -30,7 +32,7 @@ a:focus {
 }
 
 a:active {
-    color: #A30000;
+    color: #800000;
 }
 
 
@@ -46,11 +48,13 @@ a[class*='__button'] {
     font-size: 16px;
     line-height: 1.5;
     border-radius: 4px;
+    transition: background 0.3s ease, outline 0.3s ease, transform 0.2s ease;
 }
 
 button:hover,
 a[class*='__button']:hover {
     background: #A30000;
+    transform: scale(1.05);
 }
 
 button:focus,
@@ -62,6 +66,7 @@ a[class*='__button']:focus {
 button:active,
 a[class*='__button']:active {
     background: #800000;
+    transform: scale(0.95);
 }
 
 button:disabled,
@@ -69,6 +74,7 @@ button:disabled,
     background: #E5E7EB;
     color: #666;
     cursor: not-allowed;
+    transform: none;
 }
 
 
@@ -116,4 +122,42 @@ p,
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+/* Анимация для карточек */
+
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Адаптивная верстка для 768px */
+
+@media (max-width: 768px) {
+    .page {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+    button,
+    a[class*='__button'] {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
