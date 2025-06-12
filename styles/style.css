@@ -22,14 +22,14 @@
     font-weight: bold;
 }
 
-body {
+.page {
     font-family: 'Open Sans', sans-serif;
     color: #1A2F5A;
     background: #FFFFFF;
     margin: 0;
 }
 
-header {
+.header {
     background: #1A2F5A;
     color: #FFFFFF;
     padding: 1rem;
@@ -38,32 +38,38 @@ header {
     align-items: center;
 }
 
-header h1 {
+.header__title {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     display: none;
 }
 
-.logo img {
+.header__logo-image {
     width: 150px;
     height: 50px;
 }
 
-nav ul {
+.header__nav-list {
     list-style: none;
     display: flex;
     gap: 1rem;
 }
 
-nav a {
+.header__nav-link {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.user-options {
+.header__user-options {
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+.header__user-link,
+.header__accessibility-link {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .hero {
@@ -73,12 +79,17 @@ nav a {
     color: #FFFFFF;
 }
 
-.hero h2 {
+.hero__title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
 }
 
-.cta-button {
+.hero__subtitle {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.hero__cta-button {
     background: #D4A017;
     color: #FFFFFF;
     padding: 0.8rem 1.5rem;
@@ -92,19 +103,33 @@ nav a {
     padding: 0 1rem;
 }
 
-.event-grid {
+.events__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+.events__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
 }
 
-.event-card img {
+.event-card__image {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
 
-.event-button {
+.event-card__title {
+    font-size: 1.5rem;
+}
+
+.event-card__date {
+    font-size: 1rem;
+    color: #666;
+}
+
+.event-card__button {
     background: #D4A017;
     color: #FFFFFF;
     padding: 0.5rem 1rem;
@@ -118,27 +143,32 @@ nav a {
     padding: 0 1rem;
 }
 
-.form-group {
+.contact-form__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+.contact-form__group {
     margin-bottom: 1rem;
 }
 
-.form-group label {
+.contact-form__label {
     display: block;
     margin-bottom: 0.5rem;
 }
 
-.form-group input,
-.form-group textarea {
+.contact-form__input,
+.contact-form__textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #E5E7EB;
 }
 
-.form-group textarea {
+.contact-form__textarea {
     resize: vertical;
 }
 
-button[type="submit"] {
+.contact-form__submit {
     background: #D4A017;
     color: #FFFFFF;
     padding: 0.8rem 1.5rem;
@@ -151,25 +181,40 @@ button[type="submit"] {
     margin: 2rem auto;
 }
 
-.sidebar ul {
+.sidebar__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+.sidebar__news-list {
     list-style: none;
 }
 
-footer {
+.sidebar__news-link {
+    color: #1A2F5A;
+    text-decoration: none;
+}
+
+.footer {
     background: #1A2F5A;
     color: #FFFFFF;
     padding: 1rem;
     text-align: center;
 }
 
-footer a {
+.footer__link {
     color: #D4A017;
     text-decoration: none;
 }
 
-footer nav ul {
+.footer__nav-list {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+
+.footer__nav-link {
+    color: #D4A017;
+    text-decoration: none;
 }
