@@ -1,0 +1,127 @@
+.header {
+    background: #1A2F5A;
+    color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    display: none;
+}
+
+.header__logo-image {
+    width: 150px;
+    height: 50px;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.header__nav-link {
+    color: #FFFFFF;
+}
+
+.header__user-options {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header__user-link,
+.header__accessibility-link {
+    color: #FFFFFF;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: url('../images/hero-banner-1.jpg') center/cover;
+    background-color: #1A2F5A;
+    /* Фоновый цвет для контраста */
+    color: #FFFFFF;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.events {
+    max-width: 1440px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.events__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.event-card__image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.event-card__date {
+    color: #666;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.contact-form__group {
+    margin-bottom: 1rem;
+}
+
+.contact-form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+}
+
+.contact-form__textarea {
+    resize: vertical;
+}
+
+.sidebar {
+    max-width: 300px;
+    margin: 2rem auto;
+}
+
+.sidebar__news-list {
+    list-style: none;
+}
+
+.sidebar__news-link {
+    color: #1A2F5A;
+}
+
+.footer {
+    background: #1A2F5A;
+    color: #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer__nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
