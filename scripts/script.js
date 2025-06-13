@@ -250,7 +250,7 @@ function loadCardTitles() {
 
 async function fetchCardsData() {
     try {
-        const response = await fetch('/data/data.json');
+        const response = await fetch('data/data.json');
         if (!response.ok) {
             throw new Error(`Ошибка загрузки JSON: ${response.status}`);
         }
